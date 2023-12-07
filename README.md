@@ -1,5 +1,5 @@
 # Talon_PythonAPI
-    基于proto和grpc实现的对Talon机械臂的python控制
+    基于proto和grpc实现的对Talon机械臂的远程python控制（跨平台）
 ## 功能描述
 详细说明：演示Talon_controller.py的使用方法，包括连接机械臂、使能机械臂、关节空间运动、笛卡尔空间运动、获取关节角度、获取法兰位姿
 ## 运行环境
@@ -32,4 +32,4 @@ cd Talon_PythonAPI
 python3 main.py
 ```
 ## 特别说明
-机械臂控制柜提供网口，如果远程连接请配置好网口的IP地址，同时修改main.py中的ip。如果是本地连接请将IP地址设置为127.0.0.1
+机械臂控制柜提供网口，如果远程连接请配置好网口的IP地址，同时修改main.py中的ip。如果是本地连接请将main.py中的IP地址设置为127.0.0.1
