@@ -10,7 +10,7 @@ import Talon_controller as TC
 import math
 if __name__ == '__main__':
     # 连接机械臂
-    ip='127.0.0.1'
+    ip='170.170.170.100'
     port=30001
     Talon=TC.TalonController(ip,port)
     # 使能机械臂
