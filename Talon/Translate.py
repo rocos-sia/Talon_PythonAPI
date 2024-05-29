@@ -85,6 +85,7 @@ def quat2euler(data):
 def euler2quat(data):
     a = Ro.from_euler('XYZ', data)
     quart = a.as_quat()
+    
     return quart
 
 
@@ -137,4 +138,5 @@ def quat2rpy(data):
 def rpy2quat(data):
     a = Ro.from_euler('xyz', data)
     quart = a.as_quat()
+    print(quart)
     return quart

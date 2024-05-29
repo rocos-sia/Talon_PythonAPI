@@ -30,7 +30,9 @@ class TalonController:
         request = robot_command_pb2.RobotCommandRequest()
         movel = request.command.motion_command.move_l
         movel.pose.position.x, movel.pose.position.y, movel.pose.position.z = pose[:3]
-        quat = T.euler2quat(pose[3:])
+        
+        quat = T.rpy2quat(pose[3:])
+        print(f"command: {pose[3:]}")
         movel.pose.rotation.x, movel.pose.rotation.y, movel.pose.rotation.z, movel.pose.rotation.w = quat
         movel.speed = speed
         movel.acceleration = acceleration
@@ -45,7 +47,7 @@ class TalonController:
         move_j_ik.pose.position.x = pose[0]
         move_j_ik.pose.position.y = pose[1]
         move_j_ik.pose.position.z = pose[2]
-        quat=T.euler2quat([pose[3],pose[4],pose[5]])
+        quat=T.rpy2quat([pose[3],pose[4],pose[5]])
         move_j_ik.pose.rotation.x = quat[0]
         move_j_ik.pose.rotation.y = quat[1]
         move_j_ik.pose.rotation.z = quat[2]
